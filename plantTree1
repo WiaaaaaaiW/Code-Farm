@@ -1,0 +1,18 @@
+def is_even(n):
+	return n % 2 == 0
+
+m = 0
+
+while True:
+	if is_even(m) and can_harvest():
+		harvest()
+		plant(Entities.Tree)
+		move(South)
+	elif can_harvest():
+		harvest()
+		plant(Entities.Bush)
+		move(South)
+	else:
+		move(East)
+
+	m += 1
